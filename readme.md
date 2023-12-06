@@ -10,5 +10,15 @@ element组件库
 # 环境
 node版本14 
  
+# 分为多页面应用和单页面应用
+## 单页面应用
+   切换到 main分支
+## 多页面应用
+   切换到 multiple-pages分支
+# 本地启动
+npm install
+npm run dev
+# 部署
+npm run build
 
 

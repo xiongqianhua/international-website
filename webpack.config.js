@@ -1,21 +1,25 @@
-/*
- * @Author: qianhua.xiong
- */
+
+const path = require("path");
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {VueLoaderPlugin} = require('vue-loader');
 const isProduction = process.env.NODE_ENV === 'production';
+const { setEntry,setHtmlPlugin } = require('./webpack.util.js')
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
 module.exports = () => {
   return {
-    entry: './src/index.js',//入口文件位置
-    devServer: { // 测试环境服务
+    mode: isProduction ? "production" : "development",
+    entry: setEntry,
+    devtool: isProduction ? false : "inline-source-map",
+    devServer: {
       open: true,
-      port: 3000
+      hot: true, 
+      port: 3001,
     },
-    output: { //出口
-      chunkFilename: isProduction ? '[name]@[chunkhash:8].chunk.js' : '[name].chunk.js',
-      filename: isProduction ? '[name]@[contenthash].js' : '[name].js'
+    output: {
+      path: path.resolve(__dirname, "./dist"),
+      filename: "[name]/index.js",
     },
     mode: isProduction ? 'production' : 'development',
     module: {
@@ -52,17 +56,15 @@ module.exports = () => {
     },
     plugins: [
       new VueLoaderPlugin(),
-      new HtmlWebpackPlugin({
-        template: 'index.html'
+      ...setHtmlPlugin(),
+      new MiniCssExtractPlugin({
+        filename: '[name]/index.css',
       }),
-      isProduction ? new MiniCssExtractPlugin({
-        filename: '[name].[contenthash:8].css',
-        chunkFilename: '[name].[contenthash:8].chunk.css'
-      }) : null,
       new webpack.DefinePlugin({
         __VUE_OPTIONS_API__: false,
         __VUE_PROD_DEVTOOLS__: false,
       }),
+      new CleanWebpackPlugin(),
     ].filter(Boolean)
   };
 };

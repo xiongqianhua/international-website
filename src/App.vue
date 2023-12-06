@@ -1,3 +1,6 @@
+<!--
+ * @Author: qianhua.xiong
+-->
 <template>
     <HeadContent/>
     <div class="pageContent">
@@ -16,7 +19,6 @@ export default {
     components: {HeadContent,FootContent}
 }
 </script>
-  
   <style>
   * {
     margin: 0;

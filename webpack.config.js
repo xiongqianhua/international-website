@@ -6,6 +6,7 @@ const {VueLoaderPlugin} = require('vue-loader');
 const isProduction = process.env.NODE_ENV === 'production';
 const { setEntry,setHtmlPlugin } = require('./webpack.util.js')
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const ESBuildPlugin = require('esbuild-webpack-plugin').default;
 
 module.exports = () => {
   return {
@@ -19,7 +20,7 @@ module.exports = () => {
     },
     output: {
       path: path.resolve(__dirname, "./dist"),
-      filename: "[name]/index.js",
+      filename: "js/[name].[contenthash:10].js",
     },
     mode: isProduction ? 'production' : 'development',
     module: {
@@ -46,6 +47,22 @@ module.exports = () => {
           test: /\.css$/,
           use: [isProduction ? MiniCssExtractPlugin.loader : 'vue-style-loader', 'css-loader']
         },
+        { //图片
+          test: /\.(png|svg|jpg|jpeg|gif|bmp)$/,
+          type: 'asset/resource',
+          generator:{ 
+              filename: 'image/[contenthash:10].[ext]',
+          }, 
+        },
+        {
+          test: /\.mp4$/,
+          use: {
+            loader: 'file-loader',
+            options: {
+              name: 'video/[contenthash:10].[ext]',
+            },
+          },
+        },
       ]
     },
     resolve: {// 设置模块如何被解析
@@ -54,11 +71,32 @@ module.exports = () => {
       },
       extensions: ['.js', '.vue']// 按顺序解析这些后缀名
     },
+    optimization: {
+      minimizer: [new ESBuildPlugin()],
+      splitChunks: {
+        cacheGroups: {
+          defaultVendors: {
+            name: 'chunk-vendors',
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            chunks: 'initial'
+          },
+          common: {
+            name: 'chunk-common',
+            minChunks: 2,
+            priority: -20,
+            chunks: 'initial',
+            reuseExistingChunk: true
+          }
+        }
+      }
+    },
     plugins: [
       new VueLoaderPlugin(),
       ...setHtmlPlugin(),
       new MiniCssExtractPlugin({
-        filename: '[name]/index.css',
+        filename: 'css/[name].[contenthash:10].css',
+        chunkFilename: 'css/[name].[contenthash:10].chunk.css'
       }),
       new webpack.DefinePlugin({
         __VUE_OPTIONS_API__: false,

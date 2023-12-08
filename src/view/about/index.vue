@@ -1,8 +1,11 @@
+<!--
+ * @Author: qianhua.xiong
+-->
 <template>
     <el-skeleton :rows="16" animated />
 </template>
   
-<script>
+<script scoped>
   export default {
     name: 'about',
     data() {

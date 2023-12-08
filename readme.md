@@ -23,9 +23,9 @@ node版本14
    src/i18n是国际语言配置
    src/component是公共组件
 # 本地启动
-npm install
-npm run dev
+## npm install
+## npm run dev
 # 部署
-npm run build
+# npm run build
 
 

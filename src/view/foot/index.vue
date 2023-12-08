@@ -16,14 +16,3 @@ export default {
 }
 </script>
 
-<style scoped>
-.foot-box{
-    width: 100vw;
-    height: 5vh;
-    text-align: center;
-    font-size: 14px;
-}
-.foot-box span{
-    margin: 0 20px;
-}
-</style>

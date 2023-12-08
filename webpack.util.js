@@ -38,7 +38,12 @@ function setHtmlPlugin() {
         options.push(new HtmlWebpackPlugin({
           filename: name === 'main'?'index.html' :`${name}.html`,
           template: getTemplate(),
-          chunks: ['vue_vendors', name,]
+          title: name,
+          minify: {
+            collapseWhitespace: false,
+            removeComments: true, 
+          },
+          chunks: ['vue_vendors',name]
         }))
       }
     })

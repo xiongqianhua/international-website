@@ -19,7 +19,7 @@ function setEntry() {
    // 拆分vue依赖
    entry['vue_vendors'] = {
     import: ['vue'],
-    filename: '_commom/[name].js'
+    filename: 'commom/[name].js'
   }
   return entry
 }
@@ -36,14 +36,14 @@ function setHtmlPlugin() {
       if (ret) {
         const name = ret[1]
         options.push(new HtmlWebpackPlugin({
-          filename: name === 'main'?'index.html' :`${name}/index.html`,
+          filename: name === 'main'?'index.html' :`${name}.html`,
           template: getTemplate(),
-          chunks: ['vue_vendors', name, '[name]/index.css']
+          chunks: ['vue_vendors', name,]
         }))
       }
     })
     return options
-  }
+}
 module.exports = {
   setEntry,
   setHtmlPlugin

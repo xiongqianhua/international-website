@@ -1,6 +1,9 @@
 <!--
  * @Author: qianhua.xiong
 -->
+<!--
+ * @Author: qianhua.xiong
+-->
 <template>
   <el-empty description="xxxxxx"/>
 </template>
@@ -15,7 +18,3 @@
     components: {},
   }
 </script>
-  
-<style>
-  
-</style>

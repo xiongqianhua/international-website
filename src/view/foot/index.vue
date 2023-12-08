@@ -1,3 +1,6 @@
+<!--
+ * @Author: qianhua.xiong
+-->
 <template>
     <div class="foot-box"><span>{{ $t("name") }}</span><span>{{ $t('ICP') }}</span></div>
 </template>
@@ -13,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .foot-box{
     width: 100vw;
     height: 5vh;

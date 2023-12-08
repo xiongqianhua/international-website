@@ -15,7 +15,3 @@
     components: {},
   }
   </script>
-  
-<style>
-  
-</style>

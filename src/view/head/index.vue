@@ -1,3 +1,6 @@
+<!--
+ * @Author: qianhua.xiong
+-->
 
 <template>
     <div class="headerPage">
@@ -29,50 +32,3 @@ const Change = (params)=>{
     }
 }
 </script>
-
-<style scoped>
-.example-showcase .el-dropdown + .el-dropdown {
-  margin-left: 15px;
-}
-.example-showcase .el-dropdown-link {
-  cursor: pointer;
-  color: var(--el-color-primary);
-  display: flex;
-  align-items: center;
-}
-.example-showcase .el-dropdown-link {
-  cursor: pointer;
-  color: var(--el-color-primary);
-  display: flex;
-  align-items: center;
-}
-.flex-grow {
-  flex-grow: 1;
-}
-.headerPage{
-    width: 100vw;
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
-}
-.logo-wrapper{
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0 20px;
-}
-.menu {
-    margin-right: 50px;
-}
-.menu a{
-    display: inline-block;
-    text-align: center;
-    padding: 10px;
-    margin: 0 20px;
-    text-decoration:none;
-}
-.menu a:hover{
-    border-bottom: 2px solid var(--el-menu-active-color);
-    color: var(--el-menu-active-color)
-}
-</style>

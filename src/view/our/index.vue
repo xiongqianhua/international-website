@@ -1,9 +1,6 @@
 <!--
  * @Author: qianhua.xiong
 -->
-<!--
- * @Author: qianhua.xiong
--->
 <template>
   <el-card class="box-card">
     <template #header>
@@ -35,23 +32,3 @@ export default {
   }
 </script>
   
-<style scoped>
- .card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.text {
-  font-size: 14px;
-}
-
-.item {
-  margin-bottom: 18px;
-}
-
-.box-card {
-  width: 480px;
-  margin: 100px;
-}
-</style>

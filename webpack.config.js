@@ -40,7 +40,7 @@ module.exports = () => {
         {
           //.vue文件loader
           test: /\.vue$/,
-          use: 'vue-loader'
+          use: 'vue-loader'   
         },
         {
           //.css文件loader
@@ -94,10 +94,9 @@ module.exports = () => {
     plugins: [
       new VueLoaderPlugin(),
       ...setHtmlPlugin(),
-      new MiniCssExtractPlugin({
+      isProduction ? new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash:10].css',
-        chunkFilename: 'css/[name].[contenthash:10].chunk.css'
-      }),
+      }) : null,
       new webpack.DefinePlugin({
         __VUE_OPTIONS_API__: false,
         __VUE_PROD_DEVTOOLS__: false,

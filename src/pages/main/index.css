@@ -123,3 +123,16 @@ html.dark {
     width: 100vw;
     height: 80vh;
   }
+  .language-menu{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 12px;
+}
+.menu-item{
+    margin: 10px;
+    cursor: pointer;
+}
+.menu-item:hover{
+    color: #409EFF;
+    cursor: pointer;
+}

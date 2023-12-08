@@ -19,7 +19,7 @@ export default {
     components: {HeadContent,FootContent}
 }
 </script>
-  <style>
+<style>
   * {
     margin: 0;
   }

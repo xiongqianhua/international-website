@@ -15,10 +15,16 @@ node版本14
    切换到 main分支
 ## 多页面应用
    切换到 multiple-pages分支
+   src/index.html是入口的html文件，src/pages/下面的都会共用
+   src/pages/main/index.js 是启动的入口文件，编译会生成index.html首先加载
+   src/pages/[name]/index.js 会被编译为[name].html，后面根据不同可以跳转到不同的html文件
+   src/router 是配置的路由
+   src/view下面是路由的vue文件
+   src/i18n是国际语言配置
+   src/component是公共组件
 # 本地启动
-npm install
-npm run dev
+## npm install
+## npm run dev
 # 部署
-npm run build
-
+# npm run build
 

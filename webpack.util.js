@@ -36,7 +36,7 @@ function setHtmlPlugin() {
       if (ret) {
         const name = ret[1]
         options.push(new HtmlWebpackPlugin({
-          filename: name === 'main'?'index.html' :`${name}.html`,
+          filename: name === 'main'?'index.html' :`${name}/index.html`,
           template: getTemplate(),
           chunks: ['vue_vendors', name, '[name]/index.css']
         }))

@@ -17,22 +17,6 @@
     <div class="tbox-tit">{{ $t("homePage.p3") }}</div>
     <div class="tbox-content">{{ $t("homePage.p4") }}</div>
   </div>
-  <div class="swiper-wrapper">
-    <div class="swiper-slide box3">
-      <div class="videoImg">
-        <video class="video" muted loop="loop" style="display: block;" ref="videoRef" @click="pauseVideo">
-          <source src="../../images/video/video06.mp4" type="video/mp4">
-          {{ $t("tips") }}
-        </video>
-      </div>
-      <div class="sbox" v-if="playVisible">
-        <div class="icon play" @click="playVideoFuc">
-          <span>{{ $t("playing") }}</span>
-          <img src="../../images/video1.png">
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="tbox">
     <div class="tbox-tit">{{ $t("homePage.p5") }}</div>
     <div class="tbox-content">{{ $t("homePage.p6") }}</div>

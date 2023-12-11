@@ -1,0 +1,45 @@
+html.dark {
+  /* 自定义深色背景颜色 */
+  --el-bg-color: #626aef;
+}
+.el-carousel__container{
+  height: 50vw;
+}
+.el-carousel__button{
+  height: 5px;
+  border-radius: 5px;
+  background-color: #73B131;
+}
+.el-timeline-item__timestamp{
+  font-size: 2vw;
+  color: #73B130;
+  line-height: 2vh;
+  font-weight: 500;
+}
+.el-card,.is-always-shadow{
+  border: none;
+}
+.el-card.is-always-shadow{
+  box-shadow: none;
+}
+.el-timeline-item__node::before {
+  content: '';
+  position: absolute;
+  top: -7px; /* 调整内外圆之间的间距 */
+  left: -7px; /* 调整内外圆之间的间距 */
+  width: 20px; /* 减去间距 */
+  height: 20px; /* 减去间距 */
+  border-radius: 50%;
+  border: 2px solid #73B130; /* 外部圆圈的样式 */
+  z-index: 0;
+}
+.el-timeline-item__tail{
+  border-left: 4px solid var(--el-timeline-node-color);
+}
+.el-card__body>p{
+  line-height: 3vh;
+  font-size: 1.1vw;
+}
+body{
+  font-family: AlibabaPuHuiTi-Regular;
+}

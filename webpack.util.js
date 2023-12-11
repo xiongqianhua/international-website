@@ -35,8 +35,20 @@ function setHtmlPlugin() {
       const ret = file.match(/^\.\/src\/pages\/(\S*)\/index\.js$/)
       if (ret) {
         const name = ret[1]
+        if(name === 'home'){
+          options.push(new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: getTemplate(),
+            title: name,
+            minify: {
+              collapseWhitespace: false,
+              removeComments: true, 
+            },
+            chunks: ['vue_vendors',name]
+          }))
+        }
         options.push(new HtmlWebpackPlugin({
-          filename: name === 'main'?'index.html' :`${name}.html`,
+          filename: `${name}.html`,
           template: getTemplate(),
           title: name,
           minify: {

@@ -1,0 +1,138 @@
+html.dark {
+    /* 自定义深色背景颜色 */
+    --el-bg-color: #626aef;
+}
+.example-showcase .el-dropdown + .el-dropdown {
+    margin-left: 15px;
+}
+  .example-showcase .el-dropdown-link {
+    cursor: pointer;
+    color: var(--el-color-primary);
+    display: flex;
+    align-items: center;
+  }
+  .example-showcase .el-dropdown-link {
+    cursor: pointer;
+    color: var(--el-color-primary);
+    display: flex;
+    align-items: center;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .headerPage{
+      width: 100vw;
+      height: 8vh;
+      display: flex;
+      align-items: center;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  }
+  .logo-wrapper{
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 20px;
+  }
+  .menu {
+      margin-right: 50px;
+  }
+  .menu a{
+      display: inline-block;
+      text-align: center;
+      padding: 10px;
+      margin: 0 20px;
+      text-decoration:none;
+  }
+  .menu a:hover{
+      border-bottom: 2px solid var(--el-menu-active-color);
+      color: var(--el-menu-active-color)
+  }
+.foot-box{
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+    font-size: 14px;
+}
+.foot-box span{
+    margin: 0 20px;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text {
+    font-size: 14px;
+  }
+  
+  .item {
+    margin-bottom: 18px;
+  }
+  
+  .box-card {
+    width: 480px;
+    margin: 100px;
+  }
+  .el-carousel__item h3 {
+    display: flex;
+    color: #475669;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+  }
+  .language-menu{
+    display: flex;
+  }
+  .language-menu .menu-item{
+    margin: 0 5px;
+  }
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n + 1) {
+    background-color: #d3dce6;
+  }
+  * {
+    margin: 0;
+  }
+  #app {
+    box-sizing: border-box;
+  }
+  .el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
+  .pageContent{
+    width: 100vw;
+    height: 80vh;
+  }
+  .language-menu{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 12px;
+}
+.menu-item{
+    margin: 10px;
+    cursor: pointer;
+}
+.menu-item:hover{
+    color: #409EFF;
+    cursor: pointer;
+}

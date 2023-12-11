@@ -14,6 +14,8 @@
 ## 单页面应用
    切换到 main分支
 ## 多页面应用
+## 分支 internationalWeb-demo为多页面应用demo，可以接跑起来用
+
    * 切换到 multiple-pages分支，
    * src/index.html是入口的html文件，src/pages/下面的都会共用，
    * src/pages/main/index.js 是启动的入口文件，编译会生成index.html首先加载（本地启动可以看到：http://localhost:3001/#/home），

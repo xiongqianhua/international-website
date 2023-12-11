@@ -2,10 +2,6 @@
   <div class="swiper-wrapper for_wap">
     <div class="swiper-slide  box1">
       <div class="videoImg" id="videoImg1">
-        <video class="video" id="video1" muted autoplay="autoplay" loop="loop" style="display: block;">
-          <source src="../../images/video/video03.mp4" type="video/mp4">
-          {{ $t("tips") }}
-        </video>
       </div>
       <div class="sbox">
         <h1 class="tit">{{ $t("homePage.p1") }}</h1>

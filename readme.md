@@ -16,3 +16,4 @@
    * src/component是公共组件，
 # 环境
 node版本14
+# 分支 internationalWeb-demo为多页面应用demo，可以接跑起来用
